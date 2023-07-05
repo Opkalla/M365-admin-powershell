@@ -8,6 +8,6 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 $e3Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E3'
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
 
-# Combining ADD and REMOVE into one command
+# Setting the user's license
 # Replace test@domain with the user you want to change
 Set-MgUserLicense -UserId "test@domain.com" -AddLicenses @{SkuId = $e5Sku.SkuId} -RemoveLicenses @($e3Sku.SkuId)
