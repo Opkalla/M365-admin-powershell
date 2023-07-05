@@ -1,4 +1,4 @@
-# This script is used to change a user from Microsoft 365 E3 to E5
+# This script is used to change one user from Microsoft 365 E3 to E5
 
 # Connect to Microsoft Graph using 'User' scope
 Connect-MgGraph -Scopes "User.ReadWrite.All"
