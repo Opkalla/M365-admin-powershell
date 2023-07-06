@@ -8,8 +8,8 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 # Replace the path with the path to your CSV file
 $upn = Import-Csv -Path "path\to\csv\file.csv"
 
-# Variable for Microsoft 365 E5 SKU ID
-# Replace the SkuPartNumber with the SKU you want to change to, and change the variable name if needed
+# Variable for Microsoft 365 E5 SkuId
+# Replace SPE_E5 with the SkuId of the license you want, and change the variable name if needed
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
 
 # Loop through each user in the CSV file and change the license

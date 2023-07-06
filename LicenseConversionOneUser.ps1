@@ -3,8 +3,8 @@
 # Connect to Microsoft Graph using 'User' scope
 Connect-MgGraph -Scopes "User.ReadWrite.All"
 
-# Variabes for SKU's for Microsoft 365 E3 and E5
-# Replace SPE_E3 and SPE_E5 with the SKU's you want to use
+# Variabes for Microsoft 365 E3 and E5 SkuId's
+# Replace SPE_E3 and SPE_E5 with the SkuId's you want, and change the variable names if needed
 $e3Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E3'
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
 
