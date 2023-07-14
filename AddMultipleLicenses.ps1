@@ -1,5 +1,8 @@
 # Script to add multiple licenses to a user
 
+# Connect to Microsoft Graph
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+
 # Variables for Microsoft 365 E5 and EMS SkuId's
 # Replace the SkuId's with the SkuId's of the licenses you want, and change the variable names if needed
 $e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
