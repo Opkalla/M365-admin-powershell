@@ -5,8 +5,8 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 
 # Variabes for Microsoft 365 E3 and E5 SkuId's
 # Replace the SkuId's with the SkuId's of the licenses you want, and change the variable names if needed
-$e3Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E3'
-$e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
+$e3Sku = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'SPE_E3'
+$e5Sku = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'SPE_E5'
 
 # Setting the user's license
 # Replace test@domain with the user you want to change
