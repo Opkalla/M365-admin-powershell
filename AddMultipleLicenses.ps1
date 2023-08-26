@@ -5,8 +5,8 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 
 # Variables for Microsoft 365 E5 and EMS SkuId's
 # Replace the SkuId's with the SkuId's of the licenses you want, and change the variable names if needed
-$e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
-$e5EmsSku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'EMSPREMIUM'
+$e5Sku = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'SPE_E5'
+$e5EmsSku = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'EMSPREMIUM'
 
 # Creating the variable 'addLicenses' for the licenses to add (separation by commas as shown below)
 $addLicenses = 
