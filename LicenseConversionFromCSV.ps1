@@ -10,7 +10,7 @@ $upn = Import-Csv -Path "path\to\csv\file.csv"
 
 # Variable for Microsoft 365 E5 SkuId
 # Replace the SkuId with the SkuId of the license you want, and change the variable name if needed
-$e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
+$e5Sku = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'SPE_E5'
 
 # Loop through each user in the CSV file and change the license
 # Replace the "User Principal Name" with the column name of the UPN in your CSV file if needed
