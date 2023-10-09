@@ -16,7 +16,6 @@
 # Install the Microsoft Graph PowerShell SDK
 Install-Module Microsoft.Graph -Scope CurrentUser
 
-
 # Variables for Microsoft 365 E5 and EMS SkuId's
 # Replace the SkuId's with the SkuId's of the licenses you want, and change the variable names if needed
 	$teamsPhoneStandardSkuPartNumber = Get-MgSubscribedSku -All | Where-Object SkuPartNumber -eq 'MCOEV'
